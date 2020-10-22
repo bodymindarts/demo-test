@@ -6,3 +6,4 @@ environments:
     passed: testflight
     propagated:
     - k8s/**/*
+    - k8s/cf-values.yml
