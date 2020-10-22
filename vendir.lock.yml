@@ -1,0 +1,11 @@
+apiVersion: vendir.k14s.io/v1alpha1
+directories:
+- contents:
+  - git:
+      commitTitle: Update README.md...
+      sha: 73745a3a9891b0d1ceec646c184b09650c626bdb
+      tags:
+      - v1.0.0
+    path: cf-for-k8s
+  path: k8s
+kind: LockConfig
