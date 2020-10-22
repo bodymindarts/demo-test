@@ -37,7 +37,7 @@ jobs:
     - if: ${{ steps.prepare-cepler.outputs.needs_deploying == 'true' }}
       id: deploy-testflight
       env:
-        KAPP_KUBECONFIG_YAML: '{"apiVersion":"v1","clusters":[{"cluster":{"certificate-authority-data":"${{ secrets.TESTFLIGHT_CA }}","server":"${{ secrets.TESTFLIGHT_SERVER"},"name":"testflight"}],"contexts":[{"context":{"cluster":"testflight","user":"testflight-user"},"name":"testflight"}],"current-context":"testflight","kind":"Config","preferences":{},"users":[{"name":"testflight-user","user":{"token":"${{ secrets.TESTFLIGHT_TOKEN }}"}}]}'
+        KAPP_KUBECONFIG_YAML: '{"apiVersion":"v1","clusters":[{"cluster":{"certificate-authority-data":"${{ secrets.TESTFLIGHT_CA }}","server":"${{ secrets.TESTFLIGHT_SERVER }}"},"name":"testflight"}],"contexts":[{"context":{"cluster":"testflight","user":"testflight-user"},"name":"testflight"}],"current-context":"testflight","kind":"Config","preferences":{},"users":[{"name":"testflight-user","user":{"token":"${{ secrets.TESTFLIGHT_TOKEN }}"}}]}'
       run: kapp -y deploy -f rendered.yml -a testflight-cf
     - if: ${{ steps.deploy-testflight.conclusion  == 'Success' }}
       name: cepler record
@@ -87,7 +87,7 @@ jobs:
     - if: ${{ steps.prepare-cepler.outputs.needs_deploying == 'true' }}
       id: deploy-staging
       env:
-        KAPP_KUBECONFIG_YAML: '{"apiVersion":"v1","clusters":[{"cluster":{"certificate-authority-data":"${{ secrets.STAGING_CA }}","server":"${{ secrets.STAGING_SERVER"},"name":"staging"}],"contexts":[{"context":{"cluster":"staging","user":"staging-user"},"name":"staging"}],"current-context":"staging","kind":"Config","preferences":{},"users":[{"name":"staging-user","user":{"token":"${{ secrets.STAGING_TOKEN }}"}}]}'
+        KAPP_KUBECONFIG_YAML: '{"apiVersion":"v1","clusters":[{"cluster":{"certificate-authority-data":"${{ secrets.STAGING_CA }}","server":"${{ secrets.STAGING_SERVER }}"},"name":"staging"}],"contexts":[{"context":{"cluster":"staging","user":"staging-user"},"name":"staging"}],"current-context":"staging","kind":"Config","preferences":{},"users":[{"name":"staging-user","user":{"token":"${{ secrets.STAGING_TOKEN }}"}}]}'
       run: kapp -y deploy -f rendered.yml -a staging-cf
     - if: ${{ steps.deploy-staging.conclusion  == 'Success' }}
       name: cepler record

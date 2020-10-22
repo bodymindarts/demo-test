@@ -22,10 +22,10 @@ executor:
     testflight:
       app_name: testflight-cf
       ca_cert: ${{ secrets.TESTFLIGHT_CA }}
-      server: ${{ secrets.TESTFLIGHT_SERVER
+      server: ${{ secrets.TESTFLIGHT_SERVER }}
       token: ${{ secrets.TESTFLIGHT_TOKEN }}
     staging:
       app_name: staging-cf
       ca_cert: ${{ secrets.STAGING_CA }}
-      server: ${{ secrets.STAGING_SERVER
+      server: ${{ secrets.STAGING_SERVER }}
       token: ${{ secrets.STAGING_TOKEN }}
