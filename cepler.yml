@@ -1,0 +1,8 @@
+environments:
+  testflight:
+    latest:
+    - k8s/**/*
+  staging:
+    passed: testflight
+    propagated:
+    - k8s/**/*

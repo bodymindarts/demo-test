@@ -1,0 +1,31 @@
+cepler:
+  config: cepler.yml
+
+driver:
+  type: github
+  repo:
+    access_token: ${{ secrets.ACCESS_TOKEN }}
+    branch: master
+  secrets:
+    app_registry:
+      password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+processor:
+  type: ytt
+  files:
+  - k8s/cf-for-k8s/config
+  - k8s/cf-values.yml
+
+executor:
+  type: kapp
+  environments:
+    testflight:
+      app_name: testflight-cf
+      ca_cert: ${{ secrets.TESTFLIGHT_CA }}
+      server: ${{ secrets.TESTFLIGHT_SERVER
+      token: ${{ secrets.TESTFLIGHT_TOKEN }}
+    staging:
+      app_name: staging-cf
+      ca_cert: ${{ secrets.STAGING_CA }}
+      server: ${{ secrets.STAGING_SERVER
+      token: ${{ secrets.STAGING_TOKEN }}
