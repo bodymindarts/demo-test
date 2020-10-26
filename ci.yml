@@ -14,7 +14,7 @@ processor:
   type: ytt
   files:
   - k8s/cf-for-k8s/config
-  - k8s/cf-values.yml
+  - k8s
 
 executor:
   type: kapp
