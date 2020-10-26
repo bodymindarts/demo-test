@@ -1,9 +1,9 @@
 #@data/values
 ---
-system_domain: "me.com"
+system_domain: "cf.jcarter-lab.starkandwayne.com"
 app_domains:
 #@overlay/append
-- "apps.me.com"
+- "apps.cf.jcarter-lab.starkandwayne.com"
 cf_admin_password: 543efzaea0ez6mir7lpm
 
 blobstore:
