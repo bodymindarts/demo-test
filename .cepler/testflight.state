@@ -1,6 +1,6 @@
 ---
 current:
-  head_commit: 5b81d8b6b838f44d3b79606435654825cb26ecff
+  head_commit: b19a65f0854834485856b88389407a87d6621ed6
   files:
     "{latest}/k8s/cf-for-k8s/LICENSE":
       file_hash: d645695673349e3947e8e5ae42332d0ac3164cd7
@@ -558,7 +558,7 @@ current:
       file_hash: f343c8c4d72d83f3b4f0209b76281dfeec37511f
       from_commit: 6c7a52ad46aabdcc8a847bf2ec461f3741271775
       message: Sync cf-for-k8s config files
-    "{latest}/k8s/cf-values.yml":
-      file_hash: 62688a5a146124b657cf38e76743b2870176e99d
-      from_commit: 5b81d8b6b838f44d3b79606435654825cb26ecff
-      message: Update dns
+    "{latest}/k8s/testflight-values.yml":
+      file_hash: 95f3fd60d830d74177906d56d33ca0a54027a424
+      from_commit: b19a65f0854834485856b88389407a87d6621ed6
+      message: Move cf-values to testflight-values
