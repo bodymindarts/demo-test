@@ -1,4 +1,5 @@
 environments:
   testflight:
     latest:
-    - k8s/**/*
+    - k8s/cf-for-k8s/**/*
+    - k8s/testflight-values.yml
