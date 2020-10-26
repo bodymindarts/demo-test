@@ -2,8 +2,3 @@ environments:
   testflight:
     latest:
     - k8s/**/*
-  staging:
-    passed: testflight
-    propagated:
-    - k8s/**/*
-    - k8s/cf-values.yml
